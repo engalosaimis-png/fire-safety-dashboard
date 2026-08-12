@@ -13,8 +13,8 @@ from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score, r
 
 # التعديل الأهم: جعل المسارات ديناميكية لتعمل على السيرفر (Streamlit Cloud)
 DATA_DIR = os.path.dirname(__file__) if "__file__" in locals() else os.getcwd()
-FULL_FIRE_CSV_PATH = os.path.join(DATA_DIR, "Full_Processed_Fire_Data.csv")
-TRAIN_FIRE_CSV_PATH = os.path.join(DATA_DIR, "Training_Set_Fire_Data.csv")
+FULL_FIRE_CSV_PATH = os.path.join(DATA_DIR, "Full_Processed_Fire_Data.csv.gz")
+TRAIN_FIRE_CSV_PATH = os.path.join(DATA_DIR, "Training_Set_Fire_Data.csv.gz")
 TEST_FIRE_CSV_PATH = os.path.join(DATA_DIR, "Testing_Set_Fire_Data.csv")
 EXPOSURE_XLSX_PATH = os.path.join(DATA_DIR, "تقسيم المساكن.xlsx")
 
