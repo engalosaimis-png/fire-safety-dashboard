@@ -11,6 +11,16 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
+# --- إضافة كود إصلاح الاتجاه هنا ---
+st.markdown("""
+    <style>
+        html, body, [class*="st-"] {
+            direction: ltr !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+# -----------------------------------
+
 # التعديل هنا: قراءة الملفات من نفس مجلد المشروع مباشرة لتناسب الاستضافة
 FRI_SOURCE = Path("FRI.py")
 QRA_SOURCE = Path("risk matrix.py")
