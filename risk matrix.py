@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import streamlit as st
-from sklearn.ensemble import RandomForestClassifier(random_state=42)
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score, roc_auc_score
 
 # التعديل الأهم: جعل المسارات ديناميكية لتعمل على السيرفر (Streamlit Cloud)
