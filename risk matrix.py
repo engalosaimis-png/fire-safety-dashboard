@@ -311,7 +311,7 @@ def train_severity_model(train_fire_df: pd.DataFrame, test_fire_df: pd.DataFrame
     train_features, y_train = prepare_labelled_dataset(train_fire_df, "Training fire incident CSV")
     test_features, y_test = prepare_labelled_dataset(test_fire_df, "Testing fire incident CSV")
     x_train, feature_columns = encode_features(train_features)
-    model = RandomForestClassifier(n_estimators=100, criterion="log_loss", max_features="sqrt", min_samples_leaf=8, max_samples=0.85, class_weight="balanced_subsample", random_state=RANDOM_STATE, n_jobs=-1)
+    model = RandomForestClassifier(n_estimators=100, criterion="log_loss", max_features="sqrt", min_samples_leaf=8, max_samples=0.85, class_weight="balanced_subsample", random_state=42, n_jobs=-1)
     model.fit(x_train, y_train)
     active_alarm_reference = choose_active_alarm_reference(train_features)
     class_priors = {rank: float((y_train == rank).mean()) for rank in range(1, 5)}
